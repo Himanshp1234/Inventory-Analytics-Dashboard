@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Analytics Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Inventory Analytics Dashboard</h1>
+
+        <!-- Dark Mode Button -->
+        <div class="theme-container">
+            <button id="themeBtn">
+                🌙 Dark Mode
+            </button>
+        </div>
+
+        <!-- Search Section -->
+        <div class="search-box">
+
+            <input
+                type="number"
+                id="minPrice"
+                placeholder="Minimum Price"
+            >
+
+            <input
+                type="number"
+                id="maxPrice"
+                placeholder="Maximum Price"
+            >
+
+            <input
+                type="text"
+                id="productName"
+                placeholder="Search Product Name"
+            >
+
+            <button id="searchBtn">
+                Search
+            </button>
+
+        </div>
+
+        <!-- Summary Cards -->
+        <div class="cards">
+
+            <div class="card">
+                <h3>Matching Products</h3>
+                <p id="productCount">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Inventory Value</h3>
+                <p id="inventoryValue">₹0</p>
+            </div>
+
+            <div class="card">
+                <h3>Top Inventory Product</h3>
+                <p id="topProduct">-</p>
+            </div>
+
+            <div class="card">
+                <h3>Average Price</h3>
+                <p id="averagePrice">₹0</p>
+            </div>
+
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="sort-buttons">
+
+            <button id="sortAsc">
+                Price ↑
+            </button>
+
+            <button id="sortDesc">
+                Price ↓
+            </button>
+
+            <button id="downloadCSV">
+                Download CSV
+            </button>
+
+        </div>
+
+        <!-- Slider -->
+        <div class="slider-section">
+
+            <h3>Price Slider</h3>
+
+            <input
+                type="range"
+                id="priceSlider"
+                min="0"
+                max="100000"
+                value="50000"
+            >
+
+            <p id="sliderValue">
+                ₹50000
+            </p>
+
+        </div>
+
+        <!-- Message -->
+        <p id="message"></p>
+
+        <!-- Product Table -->
+        <table>
+
+            <thead>
+
+                <tr>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Stock</th>
+                    <th>Inventory Value</th>
+                </tr>
+
+            </thead>
+
+            <tbody id="productTable">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
